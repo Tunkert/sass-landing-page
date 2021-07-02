@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a simple landing page built with sass.">
+
+  <title>SASS Landing Page</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- begin navbar -->  
+  <div id="header">  
+    <div class="container">
+      <nav>
+        <div id="logo">
+          <img src="./images/unicorn.png">&nbsp;&nbsp;
+          <span>Tim Web Design</span>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- end navbar -->
+
+  <!-- begin hero div -->
+  <div id="hero">
+    <div class="container">
+      <!-- begin left hero -->
+      <div id="left-hero">
+        <h3>Web Design.</h3>
+        <h4>Defined.</h4>
+        <p class="large">HTML.</p>
+        <p class="large">CSS.</p>
+        <ul>
+          <li>Boostrap</li>
+          <li>Tailwind</li>
+          <li>Bulma</li>
+          <li>Foundation</li>
+          <li>SASS</li>
+        </ul>
+        <p class="large">Javascript.</p>
+        <ul>
+          <li>React</li>
+          <li>Angular</li>
+          <li>Vue</li>
+          <li>Svelte</li>
+          <li>Typescript</li>
+        </ul>
+      </div>
+      <!-- end left hero -->
+
+      <!-- begin right hero -->
+      <div id="right-hero">
+        <img src="./images/unicorn.svg">
+      </div>
+      <!-- end right hero -->
+    </div>
+  </div>      
+
+  <!-- begin info section 1 -->
+  <div id="info-section-1">
+    <div class="container">
+      <!-- begin left info section 1 -->
+      <div id="left-info-section-1">
+        <h3>Simple Yet Sophisticated.</h3>
+        <p>Why build something complicated when it can be just as elegant with a simple structure?</p>
+        <p>Sometimes just HTML5 and CSS3 will do the trick. Don't pay for what you don't need.</p>
+      </div>
+      <!-- end left into section 1 -->
+
+      <!-- begin right info section 1 -->
+      <div id="right-info-section-1">
+        <div id="right-left-info-section-1">
+          <img src="images/html-5.svg">
+        </div>
+        <div id="right-right-info-section-1">
+          <img src="images/css.svg">
+        </div>
+      </div>
+      <!-- end right info section 1 -->
+      
+    </div>
+  </div>
+
+  <!--begin info section 2-->
+  <div id="info-section-2">
+    <div class="container">
+      <!-- begin left into section 2 -->
+      <div id="left-info-section-2">
+        <!-- begin left-left info section 2 -->
+        <div id="left-left-info-section-2">
+          <img src="./images/javascript.svg">
+        </div>
+        <!-- end left-left info section 2 -->
+        <!-- begin right left info section 2 -->
+        <div id="right-left-info-section-2">
+          <img src="./images/php.svg">
+        </div>
+        <!-- end right left info section 2 -->
+      </div>
+      <!-- end left info section 2 -->
+      <div id="right-info-section-2">
+        <h3>We can be complex.</h3>
+        <p>Sometimes you need something a bit more complex.</p>
+        <p class="med-font">Whether it be cutomized WordPress or another php project, Nodejs, React, or Angular. Svelte or a combination of something else. Whatever it is, we have you covered.</p>
+      </div>
+    </div>
+  </div>
+  <!-- end info section 2 -->
+
+  <!-- begin form section -->
+  <div id="form">
+    <div class="container">
+      <form action="" method="post">
+        <h3>Contact Us!</h3>
+        <label for="fullname">Full name: </label>
+        <input type="text" id="fullname" name="fullname" required><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="fullname" required>        <label for="message">Message: </label><br>
+        <textarea id="message" name="message"></textarea>
+        <input class="btn-submit" type="submit" id="submit" name="submit">
+      </form>
+    </div>
+  </div>
+  <!-- end form section -->
+
+  <!-- begin footer section -->
+  <div id="footer">
+    <div class="container">
+      <p>Copyright &copy; 2021 Tim Web Design. All rights reserved. <br><br><a href="#">Image Attribution Page</a></p>
+    </div>
+  </div>
+  <!-- end footer section -->
+
+</body>
+</html>

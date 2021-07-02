@@ -1,0 +1,348 @@
+//import font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap');
+
+//font variables
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+$base-font-size: 1rem;
+$h3-font-size: 2.5 * $base-font-size;
+$h4-font-size: 2 * $base-font-size;
+$large-font-size: 1.8 * $base-font-size;
+$med-font-size: 1.3 * $base-font-size;
+$small-font-size: 0.75 * $base-font-size;
+
+// variables
+// colors
+$primary: #006BC0;
+$secondary: #0096DC;
+$orange: #FC490B;
+$yellow: #F6D867;
+$grey: #495663;
+$blue2: #0078CF;
+
+// mixins
+@mixin font-styles-primary {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin cursor {
+  cursor: pointer;
+}
+
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@mixin h3-font-styles {
+  font-size: $h3-font-size;
+  font-family: $font-secondary;
+  letter-spacing: 0.2rem;
+  @include uppercase;
+}
+
+@mixin h4-font-styles {
+  font-size: $h3-font-size;
+  font-family: $font-secondary;
+  letter-spacing: 0.18rem;
+  @include uppercase;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include reset;
+}
+
+#header {
+  background-color: $primary;
+  min-height: 80px;
+
+  .container {
+    @include container;
+  }
+    
+  #logo {
+    float: left;
+    display: inline-block;
+    @include cursor;
+    img {
+      padding-top: 20px;
+      margin-bottom: -3px;
+    }
+  }
+  span {
+    @include font-styles-primary;
+    @include uppercase;
+    color: #fff;
+    padding-top: 10px;
+    display: inline-block;
+  }
+  ul {
+    float: right;
+
+    li {
+      display: inline-block;
+      padding: 10px 10px 0 10px;
+      color: #fff;
+      @include font-styles-primary;
+      @include uppercase;
+      @include cursor;
+      a {
+        color: white;
+        text-decoration: none;
+        @include font-styles-primary;
+      }
+    }
+    li:hover {
+      background-color: $secondary;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+#hero {
+  color: rgba(0, 0, 0, 0.7);
+  .container {
+    @include container;
+    display: flex;
+    flex-flow: row wrap;
+
+    h3 {
+      @include h3-font-styles;
+    }
+
+    h4 {
+      @include h4-font-styles;
+    }
+
+    p {
+      font-size: $large-font-size;
+      @include uppercase;
+    }
+  }
+
+  #left-hero {
+    flex-basis: 40%;
+    padding: 30px 0;
+    ul {
+      li {
+        list-style-type: none;
+        margin-left: -20px;
+        @include font-styles-primary;
+      }
+    }
+  }
+
+  #right-hero {
+    flex-basis: 60%;
+    padding: 30px 0;
+    img {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding-top: 5%;
+    }
+  }
+}
+
+#info-section-1 {
+
+  background-color: $secondary;
+  color: #fff;
+  
+  .container {
+    @include container;
+    display: flex;
+    flex-flow: row wrap;
+
+    #left-info-section-1 {
+      flex-basis: 40%;
+      margin-right: 5%;
+      h3 {
+        @include h3-font-styles;        
+      }
+
+      h4 {
+        @include h4-font-styles;
+      }
+      p {
+        font-size: $med-font-size;
+        @include uppercase;
+      }
+    }
+
+    #right-info-section-1 {
+      flex-basis: 55%;
+      display: flex;
+      flex-flow: row wrap;
+  
+      #right-left-info-section-1 {
+        flex-basis: 50%;
+
+        img {
+          background-color: #fff;
+          border-radius: 100%;
+          margin: 30% auto;
+          width: 80%;
+          height: auto;
+        }
+      }
+      
+      #right-right-info-section-1 {
+        flex-basis: 50%;
+
+        img {
+          margin: 30% auto;
+          width: 80%;
+          height: auto;
+        }
+
+      }    
+    }
+  }
+}
+
+#info-section-2 {
+	.container {
+	  @include container;
+		display: flex;
+		flex-flow: row wrap;
+		background-color: #fff;
+		color: $blue2;
+
+		h3 {
+			@include h3-font-styles;
+		}
+
+		p {
+		  font-size: $med-font-size;
+		}
+
+		#left-info-section-2 {
+			flex-basis: 66%;
+			display: flex;
+			flex-flow: row wrap;
+			#left-left-info-section-2 {
+				flex-basis: 50%;
+
+				img {
+				  width: 80%;
+				  margin: 15% auto;
+				}
+			}
+			#right-left-info-section-2 {
+				flex-basis: 50%;
+
+				img {
+				  width: 80%;
+				  margin: 15% auto;
+				}
+			}
+		}
+
+		#right-info-section-2 {
+			flex-basis: 33%;
+		}
+	}
+}
+
+#form {
+  background-color: $secondary;
+  .container {
+    @include container;
+    display: flex;
+    justify-content: center;
+    color: $primary;
+
+    h3 {
+      @include h3-font-styles;
+      text-align: center;
+    }
+
+    form {
+      margin-top: 5%;
+      width: 50%;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      box-shadow: 2px 2px 3px #333;
+
+      label {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        font-size: $med-font-size;
+        @include uppercase;
+      }
+
+      input {
+        margin: 3% 5%;
+        width: 90%;
+        padding: 10px 10px;
+        font-size: $base-font-size;
+        outline: 1px solid rgba(0,0,0,0.5);
+      }
+
+      textarea {
+        display: block;
+        width: 90%;
+        margin: auto;
+        height: 200px;
+        outline: 1px solid rgba(0,0,0,0.5);
+        margin-bottom: 5%;
+        resize: none;
+        padding: 10px 10px;
+        font-size: $base-font-size;
+      }
+
+      .btn-submit {
+        padding: 15px 30px;
+        background-color: $secondary;
+        letter-spacing: 0.1rem;
+        font-size: $med-font-size;
+        color: #fff;
+        font-weight: bold;
+        @include uppercase;
+        margin-bottom: 5%;
+      }
+
+      .btn-submit:hover {
+        background-color: $primary;
+        color: whitesmoke;
+        @include cursor;
+      }
+
+      .btn-submit:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+#footer {
+  .container {
+    p {
+      font-size: $small-font-size;
+      letter-spacing: 0.07rem;
+      text-align: center;
+      padding: 20px 10px;
+      @include uppercase;
+    }
+  }
+}
